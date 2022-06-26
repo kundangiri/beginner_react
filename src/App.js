@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import First, { Second } from "./components/firstcomponents";
+import Register from "./components/studentregister";
+import { STUDENTS } from "./constants";
 
-function App() {
-
+function App(props) {
+  console.log(props, "App props")
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <First
+        title='this is the first components'
+        name="somebody"
+        age={22}
+        subjects={["physics", "electromagnetics", "maths"]}
+        location={{
+          latitude: 26.565,
+          longitude: 35.4545
+        }}
+        gender={"M"}
+        isStudent={true}
+      />
+      <Second />
+      <Register batch={'075'} faculty={'bct'} college={'kantipur'} students={STUDENTS}
+      />
     </div>
   );
 }
