@@ -20,7 +20,6 @@ const Counter = () => {
         onMouseOver={(e) => setHovered('minus')}
         onClick={() => setCount(count > 1 ? count - 1 : count)}
       />
-      <button onClick={() => setCount(count > 1 ? count - 1 : count)}>-</button> 
     </div>
   );
 };

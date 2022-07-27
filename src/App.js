@@ -3,6 +3,7 @@ import "./App.css";
 import First, { Second } from "./components/firstcomponents";
 import Register from "./components/studentregister";
 import { STUDENTS } from "./constants";
+import Counter from "./components/counter"
 
 function App(props) {
   console.log(props, "App props")
@@ -24,6 +25,7 @@ function App(props) {
       <Second />
       <Register batch={'075'} faculty={'bct'} college={'kantipur'} students={STUDENTS}
       />
+      <Counter/>
     </div>
   );
 }
